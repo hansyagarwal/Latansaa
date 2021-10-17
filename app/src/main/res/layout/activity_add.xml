@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/datePicker"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#2196F3"
+                android:onClick="dateP"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/getDate"
+                app:layout_constraintEnd_toStartOf="@+id/getDate"
+                app:layout_constraintTop_toTopOf="@+id/getDate" />
+
+            <EditText
+                android:id="@+id/getDesc"
+                android:layout_width="187dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="17dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="@+id/getTitle"
+                app:layout_constraintTop_toBottomOf="@+id/getTitle" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Date"
+                android:textAllCaps="true"
+                android:textColor="#2196F3"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/getDate"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="@+id/getDate" />
+
+            <Button
+                android:id="@+id/cancelAct"
+                android:layout_width="133dp"
+                android:layout_height="50dp"
+                android:backgroundTint="#2196F3"
+                android:onClick="cancelInfo"
+                android:text="Cancel"
+                app:icon="@android:drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.792"
+                app:layout_constraintStart_toEndOf="@+id/addRem" />
+
+            <CheckBox
+                android:id="@+id/calendarB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:fontFamily="serif"
+                android:text="Add reminder to calendar"
+                android:textAllCaps="true"
+                android:textColor="#2196F3"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/getTime" />
+
+            <TextView
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Time"
+                android:textAllCaps="true"
+                android:textColor="#2196F3"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/getTime"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/getTime" />
+
+            <EditText
+                android:id="@+id/getDate"
+                android:layout_width="185dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="19dp"
+                android:ems="10"
+                android:inputType="date"
+                android:onClick="dateP"
+                app:layout_constraintEnd_toEndOf="@+id/getDesc"
+                app:layout_constraintTop_toBottomOf="@+id/getDesc" />
+
+            <EditText
+                android:id="@+id/getTitle"
+                android:layout_width="188dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="14dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#2196F3"
+                android:onClick="timeP"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/getTime"
+                app:layout_constraintEnd_toStartOf="@+id/getTime"
+                app:layout_constraintTop_toTopOf="@+id/getTime" />
+
+            <Button
+                android:id="@+id/addRem"
+                android:layout_width="94dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="22dp"
+                android:backgroundTint="#2196F3"
+                android:onClick="addInfo"
+                android:text="Add"
+                app:icon="@android:drawable/ic_lock_idle_alarm"
+                app:layout_constraintEnd_toStartOf="@+id/cancelAct"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleB" />
+
+            <CheckBox
+                android:id="@+id/scheduleB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:checked="false"
+                android:fontFamily="serif"
+                android:text="Schedule Reminder"
+                android:textAllCaps="true"
+                android:textColor="#2196F3"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calendarB" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Description"
+                android:textAllCaps="true"
+                android:textColor="#2196F3"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/getDesc"
+                app:layout_constraintStart_toStartOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="@+id/getDesc" />
+
+            <EditText
+                android:id="@+id/getTime"
+                android:layout_width="181dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:inputType="time"
+                android:onClick="timeP"
+                app:layout_constraintEnd_toEndOf="@+id/getDate"
+                app:layout_constraintTop_toBottomOf="@+id/getDate" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="serif"
+                android:text="Title"
+                android:textAllCaps="true"
+                android:textColor="#03A9F4"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/getTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/getTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

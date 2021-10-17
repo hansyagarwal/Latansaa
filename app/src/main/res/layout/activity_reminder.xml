@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReminderActivity">
+
+    <TextView
+        android:id="@+id/titleT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="#197DCC"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/editB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descT"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleT" />
+
+    <TextView
+        android:id="@+id/dateT"
+        android:layout_width="120dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="1dp"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descT" />
+
+    <TextView
+        android:id="@+id/timeT"
+        android:layout_width="106dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="1dp"
+        android:textColor="#2196F3"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/dateT"
+        app:layout_constraintTop_toBottomOf="@+id/descT" />
+
+    <ImageButton
+        android:id="@+id/editB"
+        android:layout_width="41dp"
+        android:layout_height="40dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="editAct"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <ImageButton
+        android:id="@+id/deleteB"
+        android:layout_width="42dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="deleteAct"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editB"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
